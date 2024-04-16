@@ -1747,7 +1747,7 @@ defmodule Ecto.Adapters.DynamoDB do
     config = Resolver.resolve!(repo.config())
 
     config
-    |> Keyword.take([:debug_requests, :access_key_id, :secret_access_key, :region])
+    |> Keyword.take([:debug_requests, :access_key_id, :secret_access_key, :security_token, :region])
     |> Keyword.merge(Keyword.get(config, :dynamodb, []))
   end
 
